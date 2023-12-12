@@ -31,8 +31,8 @@ export class HomePage {
     this.geolocation.getCurrentPosition().then((resp)=>{
       this.latitude = resp.coords.latitude;
       this.longitude = resp.coords.longitude;
-      this.loc.addLocation(this.latitude, this.longitude, this.url);
       this.getMap();
+      this.loc.addLocation(this.latitude, this.longitude, this.url);
     }).catch((error) => {
       console.log("Error, no se puede obtener su ubicacion: ", error);
     });
